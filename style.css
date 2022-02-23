@@ -7,20 +7,15 @@ html, body{
     background-color: #ABC8E0;
 }
 
-
+html{
+    overflow-x: hidden
+}
 
 @media screen and (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
   }
 }
-
-
-
-html{
-    overflow-x: hidden
-}
-
 
 /*no "-" and underline*/
 
@@ -57,7 +52,6 @@ hr{
 /* header */
 
 .header {
-  overflow: hidden;
   background: #24252a;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   padding: 20px 10px;
@@ -179,7 +173,6 @@ main#carousel {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   transform-style: preserve-3d;
   perspective: 600px;
   --items: 5;
@@ -387,7 +380,6 @@ body .gcontainer .gcard .gbox {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   transition: 0.5s;
 }
 
@@ -470,7 +462,6 @@ body .gcontainer2 .gcard2 .gbox2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   transition: 0.5s;
 }
 

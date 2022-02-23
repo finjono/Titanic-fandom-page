@@ -8,16 +8,14 @@ html, body{
     background-color: rgb(226, 225, 225);
 }
 
-
+html{
+    overflow-x: hidden
+}
 
 @media screen and (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
   }
-}
-
-html{
-    overflow-x: hidden
 }
 
 /*no "-" and underline*/
@@ -55,7 +53,6 @@ hr{
 
 
 .header {
-  overflow: hidden;
   background: #24252a;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   padding: 20px 10px;
@@ -110,25 +107,15 @@ hr{
     .articletext{
         text-align: center;
         font-size: 100%;
+        padding-right: 100px;
+        padding-left: 100px;
         font-family: 'Noto Sans', sans-serif;
 }
-}
 
-@media (min-width: 1200px) {
-    .articletitle{
-        font-family: 'Noto Sans', sans-serif;
-        font-size: 400%;
-        margin-top: 15%;
-        text-align: center;
-}
-
-    .articletext{
-        text-align: center;
-        font-size: 100%;
-        font-family: 'Noto Sans', sans-serif;
+    .articletext::first-letter{
+        font-size: 600%;
 }
 }
-
 
 @media (max-width: 1199px) {
   @media (min-width: 551px) {
@@ -142,7 +129,13 @@ hr{
     .articletext{
         text-align: center;
         font-size: 100%;
+        padding-right: 60px;
+        padding-left: 60px;
         font-family: 'Noto Sans', sans-serif;
+}
+
+     .articletext::first-letter{
+        font-size: 500%;
 }
 }
 }
@@ -158,20 +151,24 @@ hr{
     .articletext{
         text-align: center;
         font-size: 100%;
+        padding-right: 30px;
+        padding-left: 30px;
         font-family: 'Noto Sans', sans-serif;
+}
+
+     .articletext::first-letter{
+        font-size: 400%;
 }
 }
 
 .articletext::first-letter{
   color: #345DCF;
-  font-size: 250%;
-  margin: 0;
+  padding-bottom:15px;
   margin-right: 3px;
+  float: left;
 }
 
 .articletext{
-    padding-right: 30px;
-    padding-left:30px;
     line-height: 1.7;
 }
 
