@@ -1,0 +1,522 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+
+html, body{
+    margin: 0;
+    height: 100%;
+    text-align: center;
+    background-color: #ABC8E0;
+}
+
+
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+
+
+html{
+    overflow-x: hidden
+}
+
+
+/*no "-" and underline*/
+
+a{
+    text-decoration: none;
+    color:white
+}
+
+li{              
+    list-style-type: none;  
+}
+
+h2{
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 400%;
+}
+
+hr{
+    width:40%;
+    
+}
+
+.hiddenstuff{
+  visibility: hidden;
+  padding: 50px 10px;
+}
+ .hiddenstuff2{
+  visibility: hidden;
+  padding: 20px 10px;
+}
+
+
+/* header */
+
+.header {
+  overflow: hidden;
+  background: #24252a;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  padding: 20px 10px;
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 9;
+}
+
+.header a {
+  float: left;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 12px;
+  padding-right:30px;
+  padding-left:30px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.header a:hover {
+  background-color: rgba(255, 255, 255, 0.877);
+  color: rgb(0, 0, 0);
+}
+
+.header-mid {
+  display: inline-block;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-mid {
+    float: none;
+  }
+}
+/*start page*/
+
+
+#start{                 
+    min-height: 90%;
+    background-image: url(img/wave.png);
+    background-size: cover; 
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-color: #FFF;
+}
+
+@media (min-width: 1200px) {
+    .startpageh2{
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 400%;
+        margin-top: 15%;
+        text-align: center;
+}
+
+    .startpageh3{
+        text-align: center;
+        font-size: 200%;
+        font-family: 'Noto Sans', sans-serif;
+}
+}
+
+
+@media (max-width: 1199px) {
+  @media (min-width: 551px) {
+    .startpageh2{
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 400%;
+        margin-top: 25%;
+        text-align: center;
+}
+
+    .startpageh3{
+        text-align: center;
+        font-size: 200%;
+        font-family: 'Noto Sans', sans-serif;
+}
+}
+}
+
+@media (max-width: 550px) {
+    .startpageh2{
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 400%;
+        margin-top: 50%;
+        padding-right: 10px;
+        padding-left:10px;
+        text-align: center;
+}
+
+    .startpageh3{
+        text-align: center;
+        font-size: 200%;
+        padding-right: 10px;
+        padding-left:10px;
+        font-family: 'Noto Sans', sans-serif;
+}
+}
+/* articles */
+
+
+/* carousel */
+
+main#carousel {
+  grid-row: 1 / 2;
+  grid-column: 1 / 8;
+  width: 100vw;
+  height: 500px;
+  padding-bottom: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  --items: 5;
+  --middle: 3;
+  --position: 1;
+}
+
+div.item {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  --r: calc(var(--position) - var(--offset));
+  --abs: max(calc(var(--r) * -1), var(--r));
+  transition: all 0.25s linear;
+  transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
+  z-index: calc((var(--position) - var(--abs)));
+}
+
+div.item:nth-of-type(1) {
+  --offset: 1;
+  background-color: rgba(255, 255, 255, 0.836);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+div.item:nth-of-type(2) {
+  --offset: 2;
+  background-color: rgba(255, 255, 255, 0.836);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+div.item:nth-of-type(3) {
+  --offset: 3;
+  background-color: rgba(255, 255, 255, 0.836);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+div.item:nth-of-type(4) {
+  --offset: 4;
+  background-color: rgba(255, 255, 255, 0.836);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+div.item:nth-of-type(5) {
+  --offset: 5;
+  background-color: rgba(255, 255, 255, 0.836);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+input:nth-of-type(1) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(1):checked ~ main#carousel {
+  --position: 1;
+}
+
+input:nth-of-type(2) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(2):checked ~ main#carousel {
+  --position: 2;
+}
+
+input:nth-of-type(3) {
+  grid-column: 4 /5;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(3):checked ~ main#carousel {
+  --position: 3;
+}
+
+input:nth-of-type(4) {
+  grid-column: 5 / 6;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(4):checked ~ main#carousel {
+  --position: 4;
+}
+
+input:nth-of-type(5) {
+  grid-column: 6 / 7;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(5):checked ~ main#carousel {
+  --position: 5;
+}
+
+#carouseldiv{
+    background-color: #ABC8E0;
+}
+
+#articlepage{
+    background-color: #ABC8E0;
+}
+
+#articlesh2{
+    margin-top: 0px;
+}
+
+.item h1{
+    font-family: 'Noto Sans', sans-serif;
+    margin-top: 20%
+}
+
+.item p{
+    font-family: 'Noto Sans', sans-serif;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+    margin-top: 10%
+}
+
+.item a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #FFF;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Noto Sans', sans-serif;
+    margin-top: 10%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+}
+
+.item a:hover{
+    background: rgb(134, 134, 134);
+    transition: 0.4s;
+    transform: scale(1.1);
+    color:#FFF;
+    box-shadow: 4x 60px rgb(0, 0, 0);
+}
+
+/*group*/
+
+#grouppage{
+    background-color: #ABC8E0;
+}
+
+.grouppageh2{
+    margin-top: 0px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+body .gcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px 0;
+}
+
+body .gcontainer .gcard {
+  position: relative;
+  min-width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(192, 192, 192, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(167, 167, 167, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.5s;
+}
+
+body .gcontainer .gcard .gbox {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.836);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+body .gcontainer .gcard .gbox:hover {
+  transform: translateY(-50px);
+}
+
+body .gcontainer .gcard .gbox:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+body .gcontainer .gcard .gbox .gcontent {
+  padding: 50px;
+  text-align: center;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body .gcontainer .gcard .gbox .gcontent h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  color: rgb(0, 0, 0);
+}
+
+body .gcontainer .gcard .gbox .gcontent h3 {
+  font-size: 1.8rem;
+  color: black;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+body .gcontainer .gcard .gbox .gcontent p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: black;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+/* second line */
+
+body .gcontainer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px 0;
+}
+
+body .gcontainer2 .gcard2 {
+  position: relative;
+  min-width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(192, 192, 192, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(167, 167, 167, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.5s;
+}
+
+
+body .gcontainer2 .gcard2 .gbox2 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.836);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+body .gcontainer2 .gcard2 .gbox2:hover {
+  transform: translateY(-50px);
+}
+
+body .gcontainer2 .gcard2 .gbox2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+body .gcontainer2 .gcard2 .gbox2 .gcontent2 {
+  padding: 50px;
+  text-align: center;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body .gcontainer2 .gcard2 .gbox2 .gcontent2 h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  color: rgb(0, 0, 0);
+  
+}
+
+body .gcontainer2 .gcard2 .gbox2 .gcontent2 h3 {
+  font-size: 1.8rem;
+  color: black;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 15px;
+  
+}
+
+body .gcontainer2 .gcard2 .gbox2 .gcontent2 p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: black;
+  z-index: 1;
+  transition: 0.5s;
+  
+}

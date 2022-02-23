@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+
+html, body{
+    margin: 0;
+    height: 100%;
+    text-align: center;
+    background-position: center;
+    background-color: rgb(226, 225, 225);
+}
+
+
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+html{
+    overflow-x: hidden
+}
+
+/*no "-" and underline*/
+
+a{
+    text-decoration: none;
+    color:white
+}
+
+li{              
+    list-style-type: none;  
+}
+
+h2{
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 400%;
+}
+
+hr{
+    width:40%;
+    
+}
+
+.hiddenstuff{
+  visibility: hidden;
+  padding: 50px 10px;
+}
+ .hiddenstuff2{
+  visibility: hidden;
+  padding: 20px 10px;
+}
+
+/* header */
+
+
+.header {
+  overflow: hidden;
+  background: #24252a;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  padding: 20px 10px;
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 9;
+}
+
+.header a {
+  float: left;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 12px;
+  padding-right:30px;
+  padding-left:30px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.header a:hover {
+  background-color: rgba(255, 255, 255, 0.877);
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+/*start page*/
+
+
+#article{                 
+    min-height: 90%;
+    background-size: cover; 
+    margin-left: 5%;
+    margin-right:5%;
+    background-position: center;
+    background-color: #ebebeb;
+}
+
+@media (min-width: 1200px) {
+    .articletitle{
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 400%;
+        margin-top: 15%;
+        text-align: center;
+}
+
+    .articletext{
+        text-align: center;
+        font-size: 100%;
+        font-family: 'Noto Sans', sans-serif;
+}
+}
+
+@media (min-width: 1200px) {
+    .articletitle{
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 400%;
+        margin-top: 15%;
+        text-align: center;
+}
+
+    .articletext{
+        text-align: center;
+        font-size: 100%;
+        font-family: 'Noto Sans', sans-serif;
+}
+}
+
+
+@media (max-width: 1199px) {
+  @media (min-width: 551px) {
+    .articletitle{
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 400%;
+        margin-top: 25%;
+        text-align: center;
+}
+
+    .articletext{
+        text-align: center;
+        font-size: 100%;
+        font-family: 'Noto Sans', sans-serif;
+}
+}
+}
+
+@media (max-width: 550px) {
+    .articletitle{
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 400%;
+        margin-top: 50%;
+        text-align: center;
+}
+
+    .articletext{
+        text-align: center;
+        font-size: 100%;
+        font-family: 'Noto Sans', sans-serif;
+}
+}
+
+.articletext::first-letter{
+  color: #345DCF;
+  font-size: 250%;
+  margin: 0;
+  margin-right: 3px;
+}
+
+.articletext{
+    padding-right: 30px;
+    padding-left:30px;
+    line-height: 1.7;
+}
+
+@media (min-width: 1200px) {
+    #article{
+        margin-right:10%;
+        margin-left:10%;
+    }
+}
