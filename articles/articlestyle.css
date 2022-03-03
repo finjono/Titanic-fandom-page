@@ -149,7 +149,7 @@ hr{
 @media (max-width: 550px) {
     .articletitle{
         font-family: 'Noto Sans', sans-serif;
-        font-size: 400%;
+        font-size: 280%;
         margin-top: 50%;
         text-align: center;
 }
@@ -157,8 +157,8 @@ hr{
     .articletext{
         text-align: left;
         font-size: 100%;
-        padding-right: 30px;
-        padding-left: 30px;
+        padding-right: 45px;
+        padding-left: 45px;
         font-family: 'Noto Sans', sans-serif;
 }
 
