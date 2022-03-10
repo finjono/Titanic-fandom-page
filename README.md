@@ -1,4 +1,4 @@
-# DIF-WEBSITE
+# Titanic Fandom Page
 
 ## This website is a school-project for collecting the different articles, our group wrote. They're all about different topics, which are dealing with the Titanic.
 
